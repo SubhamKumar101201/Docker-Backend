@@ -1,0 +1,12 @@
+version: '1'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgresdb
+  app:
+    image: my-node-app
+    ports:
+      - 5969:3000
